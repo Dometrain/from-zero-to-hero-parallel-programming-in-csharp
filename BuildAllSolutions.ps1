@@ -24,7 +24,7 @@ $slnFiles | ForEach-Object -Parallel {
 
     try {
         Write-Host "Building solution: $($slnFile)"
-        $buildOutput = dotnet build $slnFile 2>&1
+        $buildOutput = dotnet build $slnFile -c Release 2>&1
         if ($LASTEXITCODE -eq 0) {
             Write-Host "Build succeeded for: $($slnFile)" -ForegroundColor Green
         } else {
