@@ -6,7 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "nuget"
-    directory: "/5. Async Await Best Practices/src/"
+    directory: "/6. PLinq/src/"
     schedule:
       interval: "weekly"
   - package-ecosystem: "dotnet-sdk"
