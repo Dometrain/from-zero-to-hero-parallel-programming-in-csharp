@@ -29,7 +29,7 @@ Trace.WriteLine("Program Completed");
 async Task SimulateLongRunningFunction(CancellationToken token)
 {
 	Trace.WriteLine($"Started on Thread {Environment.CurrentManagedThreadId}");
-	
+
 	token.ThrowIfCancellationRequested();
 	await Task.Delay(TimeSpan.FromSeconds(2), token); // Thread will return to the Thread Pool until Task.Delay is completed
 

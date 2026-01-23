@@ -19,7 +19,7 @@ public abstract class Food
 		Trace.WriteLine($"Cooking {Name}");
 		await Task.Delay(_cookTime, token);
 		Trace.WriteLine($"{Name} Completed");
-		
+
 		return Name;
 	}
 }

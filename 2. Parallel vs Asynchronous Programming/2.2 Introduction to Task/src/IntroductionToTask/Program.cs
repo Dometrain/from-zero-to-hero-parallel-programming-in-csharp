@@ -26,7 +26,7 @@ Trace.WriteLine("Program Completed");
 void SimulateLongRunningFunction(CancellationToken token)
 {
 	Trace.WriteLine($"Long running function started on Thread {Environment.CurrentManagedThreadId}");
-	
+
 	token.ThrowIfCancellationRequested();
 	Thread.Sleep(TimeSpan.FromSeconds(2));
 

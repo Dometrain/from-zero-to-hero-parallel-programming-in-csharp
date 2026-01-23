@@ -1,4 +1,4 @@
-#pragma warning disable 
+#pragma warning disable
 using System.Diagnostics;
 
 namespace IntroToTask;
@@ -10,7 +10,7 @@ public class Database
 
 	Database()
 	{
-		
+
 	}
 
 	public static Database Current => _database.Value;

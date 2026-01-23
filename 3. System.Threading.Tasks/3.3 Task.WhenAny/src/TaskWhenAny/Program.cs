@@ -26,7 +26,7 @@ try
 		cookingList.Remove(completedCookingTask);
 
 		var name = await completedCookingTask;
-		
+
 		Trace.WriteLine($"Eating {name}");
 	}
 }
