@@ -4,4 +4,4 @@
 
 # From Zero to Hero: Parallel Programming in C#
 
-This repo contains all of the open-source samples used in the DomeTrain course "From Zero to Hero: Parallel Programming in C#
+This repo contains all of the open-source samples used in the DomeTrain course ["From Zero to Hero: Parallel Programming in C#](https://dometrain.com/course/from-zero-to-hero-parallel-programming-in-csharp/)
