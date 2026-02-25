@@ -3,7 +3,7 @@ $SearchFolder = "$(Get-Location)"
 
 # Recursively find all `.sln` files
 Write-Host "Searching for solution files (*.sln) in '$SearchFolder'..." -ForegroundColor Cyan
-$slnFiles = Get-ChildItem -Path $SearchFolder -Recurse -Filter *.sln -ErrorAction SilentlyContinue
+$slnFiles = Get-ChildItem -Path $SearchFolder -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.Extension -in '.sln', '.slnx' }
 
 if ($slnFiles.Count -eq 0) {
     Write-Host "No solution files (*.sln) found in '$SearchFolder'." -ForegroundColor Yellow
