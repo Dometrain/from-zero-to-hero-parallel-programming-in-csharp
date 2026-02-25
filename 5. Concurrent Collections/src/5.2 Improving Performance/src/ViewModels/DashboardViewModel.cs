@@ -144,7 +144,7 @@ public sealed partial class DashboardViewModel : BaseViewModel, IAsyncDisposable
 		catch (ApiException e) when (e.StatusCode is HttpStatusCode.TooManyRequests)
 		{
 			if (e.Headers.TryGetValues("X-Ratelimit-Reset", out var rateLimitResetHeaders)
-			    && long.TryParse(rateLimitResetHeaders.Single(), out var rateLimitResetDateTimeInUnixTimeSeconds))
+				&& long.TryParse(rateLimitResetHeaders.Single(), out var rateLimitResetDateTimeInUnixTimeSeconds))
 			{
 				var rateLimitDuration = DateTimeOffset.FromUnixTimeSeconds(rateLimitResetDateTimeInUnixTimeSeconds) - DateTimeOffset.UtcNow;
 
